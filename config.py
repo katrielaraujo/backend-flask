@@ -1,5 +1,6 @@
 import os
 
+
 class Config:
     SECRET_KEY = 'admin123'
     basedir = os.path.abspath(os.path.dirname(__file__))
