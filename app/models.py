@@ -6,8 +6,9 @@ class Usuario(db.Model):
     senha = db.Column(db.String(60), nullable=False)
     vendas = db.relationship('Venda', backref='usuario', lazy=True)
 
-    def verificar_senhar(self, senha):
+    def verificar_senha(self, senha):
         return bcrypt.check_password_hash(self.senha, senha)
+
 
 class Venda(db.Model):
     id = db.Column(db.Integer, primary_key=True)
