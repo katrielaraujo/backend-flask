@@ -5,3 +5,6 @@ __pycache__/
 *.pyc
 *.pyo
 vendas.db
+# Arquivos gerados pelo Flask-Migrate
+migrations/
+!migrations/versions/

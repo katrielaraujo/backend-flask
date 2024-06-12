@@ -29,8 +29,8 @@ Esta é uma API de Vendas desenvolvida usando Flask, Flask-SQLAlchemy e JWT para
 ## Configuração
 
  Crie um arquivo `instance/config.py` e configure as variáveis conforme necessário: 
-     ```python
-    
+     
+    ```python
     import os
 
     class Config:
@@ -46,6 +46,19 @@ Esta é uma API de Vendas desenvolvida usando Flask, Flask-SQLAlchemy e JWT para
     ```
 
 ## Execução
+
+1. Inicialize o repositório de migrações:
+    ```bash
+    flask db init
+    ```
+2. Crie a primeira migração:
+    ```bash
+    flask db migrate -m "Initial migration"
+    ```
+3. Aplique a migração ao banco de dados:
+    ```bash
+    flask db upgrade
+    ```
 
 1. Inicie a aplicação:
     ```bash
